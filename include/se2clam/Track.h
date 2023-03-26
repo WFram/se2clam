@@ -4,7 +4,7 @@
  */
 #ifndef TRACK_H
 #define TRACK_H
-#include <g2o/types/sba/types_six_dof_expmap.h>
+#include "g2o/types/sba/types_six_dof_expmap.h"
 #include "Config.h"
 #include "Frame.h"
 #include "Sensors.h"
