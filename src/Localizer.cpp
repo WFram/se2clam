@@ -56,7 +56,7 @@ void Localizer::run() {
 
         //! Get new measurement: image and odometry
 //        string fullImgName = Config::DataPath + "/image/" + to_string(id_raw) + ".bmp";
-//        Mat img = imread(fullImgName, CV_LOAD_IMAGE_GRAYSCALE);
+//        Mat img = imread(fullImgName, cv::IMREAD_GRAYSCALE);
 
 //        getline(odo_rec, odo_line);
 //        istringstream iss(odo_line);
@@ -447,7 +447,7 @@ void Localizer::DrawImgCurr() {
 
     mpKFCurr->copyImgTo(mImgCurr);
     if(mImgCurr.channels() == 1)
-        cvtColor(mImgCurr, mImgCurr, CV_GRAY2BGR);
+        cvtColor(mImgCurr, mImgCurr, cv::COLOR_GRAY2BGR);
 
     for (int i=0, iend=mpKFCurr->keyPoints.size(); i<iend; i++) {
 
@@ -487,9 +487,9 @@ void Localizer::DrawImgMatch(const map<int, int> & mapMatch) {
     }
 
     if(mImgLoop.channels() == 1)
-        cvtColor(mImgLoop, mImgLoop, CV_GRAY2BGR);
+        cvtColor(mImgLoop, mImgLoop, cv::COLOR_GRAY2BGR);
     if(mImgMatch.channels() == 1)
-        cvtColor(mImgMatch, mImgMatch, CV_GRAY2BGR);
+        cvtColor(mImgMatch, mImgMatch, cv::COLOR_GRAY2BGR);
     vconcat(mImgCurr, mImgLoop, mImgMatch);
 
     //! Draw Features

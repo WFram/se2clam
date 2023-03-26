@@ -36,7 +36,7 @@ Mat drawKeysWithNum(const vector<KeyPoint> keys, const Mat &img, vector<uchar> m
     }
     Mat out = img.clone();
     if (img.channels() == 1)
-        cvtColor(img, out, CV_GRAY2BGR);
+        cvtColor(img, out, cv::COLOR_GRAY2BGR);
     for (unsigned i = 0; i < mask.size(); i++) {
         if (!mask[i])
             continue;

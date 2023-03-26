@@ -67,7 +67,7 @@ void Track::run(){
     while(ros::ok()){
 
 //        string fullImgName = Config::DataPath + "/image/" + to_string(i) + ".bmp";
-//        Mat img = imread(fullImgName, CV_LOAD_IMAGE_GRAYSCALE);
+//        Mat img = imread(fullImgName, cv::IMREAD_GRAYSCALE);
 //        getline(rec, line);
 //        istringstream iss(line);
 //        iss >> x >> y >> theta;

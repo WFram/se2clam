@@ -112,7 +112,7 @@ cv::Mat FramePublish::drawMatchesInOneImg(const vector<KeyPoint> queryKeys, cons
                                           const vector<KeyPoint> trainKeys, const vector<int> &matches){
     Mat out = trainImg.clone();
     if (trainImg.channels() == 1)
-        cvtColor(trainImg, out, CV_GRAY2BGR);
+        cvtColor(trainImg, out, cv::COLOR_GRAY2BGR);
     for (unsigned i = 0; i < matches.size(); i++) {
 
         if (matches[i] < 0) {
@@ -134,7 +134,7 @@ cv::Mat FramePublish::drawMatchesInOneImg(const vector<KeyPoint> queryKeys, cons
 cv::Mat FramePublish::drawKeys(const vector<KeyPoint> keys, const Mat &img, vector<int> matched){
     Mat out = img.clone();
     if (img.channels() == 1)
-        cvtColor(img, out, CV_GRAY2BGR);
+        cvtColor(img, out, cv::COLOR_GRAY2BGR);
     for (unsigned i = 0; i < matched.size(); i++) {
         Point2f pt1 = keys[i].pt;
         if (matched[i] < 0) {

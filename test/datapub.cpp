@@ -37,7 +37,7 @@ int main(int argc, char **argv)
     for(int i = 0; i < N && ros::ok(); i++)
     {
         string fullImgName = path + "/image/" + to_string(i) + ".bmp";
-        Mat img = imread(fullImgName, CV_LOAD_IMAGE_GRAYSCALE);
+        Mat img = imread(fullImgName, cv::IMREAD_GRAYSCALE);
         getline(rec, line);
         istringstream iss(line);
         iss >> x >> y >> theta;

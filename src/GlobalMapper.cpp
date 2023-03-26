@@ -1097,11 +1097,11 @@ void GlobalMapper::ComputeBowVecAll()
 //void GlobalMapper::DrawMatch(const vector<int> & viMatch) {
 
 //    if(mImgCurr.channels() == 1)
-//        cvtColor(mImgCurr, mImgCurr, CV_GRAY2BGR);
+//        cvtColor(mImgCurr, mImgCurr, cv::COLOR_GRAY2BGR);
 //    if(mImgLoop.channels() == 1)
-//        cvtColor(mImgLoop, mImgLoop, CV_GRAY2BGR);
+//        cvtColor(mImgLoop, mImgLoop, cv::COLOR_GRAY2BGR);
 //    if(mImgMatch.channels() == 1)
-//        cvtColor(mImgMatch, mImgMatch, CV_GRAY2BGR);
+//        cvtColor(mImgMatch, mImgMatch, cv::COLOR_GRAY2BGR);
 //    if (mImgCurr.size().width != mImgLoop.size().width) {
 //        return;
 //    }
@@ -1170,12 +1170,12 @@ void GlobalMapper::DrawMatch(const map<int, int> & mapMatch) {
 
     if(mImgCurr.channels() == 1) {
         Mat imgTemp = mImgCurr.clone();
-        cvtColor(mImgCurr, imgTemp, CV_GRAY2BGR);
+        cvtColor(mImgCurr, imgTemp, cv::COLOR_GRAY2BGR);
         imgTemp.copyTo(mImgCurr);
     }
     if(mImgLoop.channels() == 1) {
         Mat imgTemp = mImgLoop.clone();
-        cvtColor(mImgLoop, imgTemp, CV_GRAY2BGR);
+        cvtColor(mImgLoop, imgTemp, cv::COLOR_GRAY2BGR);
         imgTemp.copyTo(mImgLoop);
     }
     Size sizeImgCurr = mImgCurr.size();
